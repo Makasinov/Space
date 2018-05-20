@@ -9,10 +9,11 @@
 #include <QGraphicsView>
 #include <QDesktopWidget>
 #include <QGraphicsScene>
+#include <QDir>
 
 const int errorCounter = 200;
 
-const QString FOLDER_PATH = "F:\\ephemeris_TXT_formatted";
+const QString FOLDER_PATH = "C:\\Users\\User\\Documents\\GitHub\\Space\\ephemeris_TXT_formatted";
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -88,7 +89,8 @@ void MainWindow::on_pushButton_clicked()
     {
         QMessageBox::information(this,
                                  "Ошибка",
-                                 "Неудалось открыть текущий год");
+                                 "Неудалось открыть текущий год\n"
+                                 "Проверьте путь -> " + filePath);
         file->close();
         return;
     }
