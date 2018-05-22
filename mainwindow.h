@@ -18,6 +18,8 @@ public:
     ~MainWindow();
     bool setGraphics();
     void removeOtherRows(QTableWidget &table, const int number);
+    void drawLines(const int x, const int y);
+    void drawSymbols(const int x, const int y);
 
 signals:
     void hideEvent(QHideEvent *event);
@@ -32,6 +34,7 @@ private slots:
     void on_pushButton_2_clicked();
 
 private:
+    QFont font;
     QGraphicsView * view = new QGraphicsView;
     QGraphicsScene * scene = new QGraphicsScene(view);
     Ui::MainWindow *ui;

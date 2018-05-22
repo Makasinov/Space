@@ -339,7 +339,7 @@
      <x>0</x>
      <y>0</y>
      <width>730</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="defaultUp">
@@ -424,6 +424,10 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>tabWidget</tabstop>
   <tabstop>tableWidget</tabstop>
   <tabstop>tableWidget_2</tabstop>
  </tabstops>

@@ -1,0 +1,27 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>gif/aqua.gif</file>
+    <file>gif/aries.gif</file>
+    <file>gif/cancer.gif</file>
+    <file>gif/capricor.gif</file>
+	<file>gif/comet.gif</file>
+	<file>gif/earth1.gif</file>
+	<file>gif/gemini.gif</file>
+	<file>gif/jupiter.gif</file>
+	<file>gif/leo.gif</file>
+    <file>gif/libra.gif</file>
+    <file>gif/mars.gif</file>
+	<file>gif/mercury.gif</file>
+	<file>gif/neptun1.gif</file>
+	<file>gif/pisces.gif</file>
+	<file>gif/pluto.gif</file>
+	<file>gif/sagittar.gif</file>
+	<file>gif/saturn.gif</file>
+    <file>gif/scorpio.gif</file>
+    <file>gif/sun.gif</file>
+	<file>gif/taurus.gif</file>
+	<file>gif/uran2.gif</file>
+	<file>gif/venus.gif</file>
+    <file>gif/virgo.gif</file>
+</qresource>
+</RCC>
