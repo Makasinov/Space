@@ -16,7 +16,7 @@
 #include <QGraphicsPixmapItem>
 
 const int errorCounter = 200;
-const QString FOLDER_PATH = "C:\\Users\\User\\Documents\\GitHub\\Space\\ephemeris_TXT_formatted";
+const QString FOLDER_PATH = ":\\ephemeris_TXT_formatted";
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
