@@ -1,12 +1,12 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource>
-<file>ephemeris_TXT_formatted/1900_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1901_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1902_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1903_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1904_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1905_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1906_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1900_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1901_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1902_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1903_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1904_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1905_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/1906_formatted.txt</file>
 <file>ephemeris_TXT_formatted/1907_formatted.txt</file>
 <file>ephemeris_TXT_formatted/1908_formatted.txt</file>
 <file>ephemeris_TXT_formatted/1909_formatted.txt</file>
@@ -178,29 +178,28 @@
 <file>ephemeris_TXT_formatted/2075_formatted.txt</file>
 <file>ephemeris_TXT_formatted/2076_formatted.txt</file>
 <file>ephemeris_TXT_formatted/2077_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2078_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2079_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2080_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2081_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2082_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2083_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2084_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2085_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2086_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2087_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2088_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2089_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2090_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2091_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2092_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2093_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2094_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2095_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2096_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2097_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2098_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2099_formatted.txt</file>
-
+	<file>ephemeris_TXT_formatted/2078_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2079_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2080_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2081_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2082_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2083_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2084_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2085_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2086_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2087_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2088_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2089_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2090_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2091_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2092_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2093_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2094_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2095_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2096_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2097_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2098_formatted.txt</file>
+	<file>ephemeris_TXT_formatted/2099_formatted.txt</file>
     <file>gif/aqua.gif</file>
     <file>gif/aries.gif</file>
     <file>gif/cancer.gif</file>

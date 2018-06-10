@@ -4,10 +4,34 @@
 #include <QMainWindow>
 #include <QTableWidget>
 #include <QGraphicsView>
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
 }
+
+class GraphicsView : public QGraphicsView
+{
+    Q_OBJECT
+public:
+    explicit GraphicsView(int h, int w, QWidget *parent = 0)
+    {
+        this->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
+        this->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
+        this->setScene(&scene);
+    }
+    QGraphicsScene scene;
+
+signals:
+    void resizeEvent(QResizeEvent * event);
+
+public slots:
+    void drawLines();
+    void drawSymbols();
+    bool setGraphics();
+};
+
+
 
 class MainWindow : public QMainWindow
 {
@@ -16,10 +40,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    bool setGraphics();
+    GraphicsView * myView = new GraphicsView(500,500,this);
     void removeOtherRows(QTableWidget &table, const int number);
-    void drawLines(const int x, const int y);
-    void drawSymbols(const int x, const int y);
 
 signals:
     void hideEvent(QHideEvent *event);
@@ -34,9 +56,6 @@ private slots:
     void on_pushButton_2_clicked();
 
 private:
-    QFont font;
-    QGraphicsView * view = new QGraphicsView;
-    QGraphicsScene * scene = new QGraphicsScene(view);
     Ui::MainWindow *ui;
 };
 
