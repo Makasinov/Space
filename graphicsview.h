@@ -27,7 +27,7 @@ public:
     }
     QGraphicsScene scene;
 private:
-    const double OPACITY = 0.2;
+    const double OPACITY = 0.1;
     QWidget * parent;
 
 signals:

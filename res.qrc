@@ -1,205 +1,205 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource>
-	<file>ephemeris_TXT_formatted/1900_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/1901_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/1902_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/1903_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/1904_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/1905_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/1906_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1907_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1908_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1909_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1910_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1911_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1912_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1913_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1914_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1915_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1916_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1917_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1918_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1919_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1920_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1921_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1922_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1923_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1924_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1925_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1926_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1927_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1928_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1929_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1930_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1931_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1932_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1933_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1934_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1935_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1936_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1937_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1938_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1939_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1940_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1941_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1942_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1943_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1944_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1945_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1946_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1947_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1948_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1949_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1950_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1951_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1952_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1953_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1954_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1955_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1956_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1957_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1958_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1959_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1960_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1961_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1962_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1963_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1964_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1965_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1966_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1967_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1968_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1969_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1970_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1971_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1972_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1973_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1974_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1975_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1976_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1977_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1978_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1979_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1980_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1981_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1982_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1983_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1984_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1985_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1986_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1987_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1988_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1989_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1990_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1991_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1992_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1993_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1994_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1995_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1996_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1997_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1998_formatted.txt</file>
-<file>ephemeris_TXT_formatted/1999_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2000_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2001_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2002_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2003_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2004_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2005_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2006_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2007_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2008_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2009_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2010_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2011_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2012_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2013_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2014_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2015_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2016_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2017_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2018_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2019_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2020_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2021_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2022_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2023_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2024_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2025_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2026_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2027_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2028_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2029_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2030_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2031_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2032_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2033_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2034_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2035_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2036_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2037_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2038_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2039_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2040_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2041_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2042_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2043_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2044_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2045_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2046_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2047_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2048_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2049_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2050_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2051_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2052_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2053_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2054_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2055_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2056_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2057_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2058_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2059_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2060_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2061_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2062_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2063_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2064_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2065_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2066_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2067_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2068_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2069_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2070_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2071_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2072_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2073_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2074_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2075_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2076_formatted.txt</file>
-<file>ephemeris_TXT_formatted/2077_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2078_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2079_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2080_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2081_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2082_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2083_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2084_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2085_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2086_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2087_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2088_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2089_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2090_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2091_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2092_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2093_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2094_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2095_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2096_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2097_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2098_formatted.txt</file>
-	<file>ephemeris_TXT_formatted/2099_formatted.txt</file>
+	<file>formatted/1900_chars.txt</file>
+	<file>formatted/1901_chars.txt</file>
+	<file>formatted/1902_chars.txt</file>
+	<file>formatted/1903_chars.txt</file>
+	<file>formatted/1904_chars.txt</file>
+	<file>formatted/1905_chars.txt</file>
+	<file>formatted/1906_chars.txt</file>
+	<file>formatted/1907_chars.txt</file>
+	<file>formatted/1908_chars.txt</file>
+	<file>formatted/1909_chars.txt</file>
+	<file>formatted/1910_chars.txt</file>
+	<file>formatted/1911_chars.txt</file>
+	<file>formatted/1912_chars.txt</file>
+	<file>formatted/1913_chars.txt</file>
+	<file>formatted/1914_chars.txt</file>
+	<file>formatted/1915_chars.txt</file>
+	<file>formatted/1916_chars.txt</file>
+	<file>formatted/1917_chars.txt</file>
+	<file>formatted/1918_chars.txt</file>
+	<file>formatted/1919_chars.txt</file>
+	<file>formatted/1920_chars.txt</file>
+	<file>formatted/1921_chars.txt</file>
+	<file>formatted/1922_chars.txt</file>
+	<file>formatted/1923_chars.txt</file>
+	<file>formatted/1924_chars.txt</file>
+	<file>formatted/1925_chars.txt</file>
+	<file>formatted/1926_chars.txt</file>
+	<file>formatted/1927_chars.txt</file>
+	<file>formatted/1928_chars.txt</file>
+<file>formatted/1929_chars.txt</file>
+<file>formatted/1930_chars.txt</file>
+<file>formatted/1931_chars.txt</file>
+<file>formatted/1932_chars.txt</file>
+<file>formatted/1933_chars.txt</file>
+<file>formatted/1934_chars.txt</file>
+<file>formatted/1935_chars.txt</file>
+<file>formatted/1936_chars.txt</file>
+<file>formatted/1937_chars.txt</file>
+<file>formatted/1938_chars.txt</file>
+<file>formatted/1939_chars.txt</file>
+<file>formatted/1940_chars.txt</file>
+<file>formatted/1941_chars.txt</file>
+<file>formatted/1942_chars.txt</file>
+<file>formatted/1943_chars.txt</file>
+<file>formatted/1944_chars.txt</file>
+<file>formatted/1945_chars.txt</file>
+<file>formatted/1946_chars.txt</file>
+<file>formatted/1947_chars.txt</file>
+<file>formatted/1948_chars.txt</file>
+<file>formatted/1949_chars.txt</file>
+<file>formatted/1950_chars.txt</file>
+<file>formatted/1951_chars.txt</file>
+<file>formatted/1952_chars.txt</file>
+<file>formatted/1953_chars.txt</file>
+<file>formatted/1954_chars.txt</file>
+<file>formatted/1955_chars.txt</file>
+<file>formatted/1956_chars.txt</file>
+<file>formatted/1957_chars.txt</file>
+<file>formatted/1958_chars.txt</file>
+<file>formatted/1959_chars.txt</file>
+<file>formatted/1960_chars.txt</file>
+<file>formatted/1961_chars.txt</file>
+<file>formatted/1962_chars.txt</file>
+<file>formatted/1963_chars.txt</file>
+<file>formatted/1964_chars.txt</file>
+<file>formatted/1965_chars.txt</file>
+<file>formatted/1966_chars.txt</file>
+<file>formatted/1967_chars.txt</file>
+<file>formatted/1968_chars.txt</file>
+<file>formatted/1969_chars.txt</file>
+<file>formatted/1970_chars.txt</file>
+<file>formatted/1971_chars.txt</file>
+<file>formatted/1972_chars.txt</file>
+<file>formatted/1973_chars.txt</file>
+<file>formatted/1974_chars.txt</file>
+<file>formatted/1975_chars.txt</file>
+<file>formatted/1976_chars.txt</file>
+<file>formatted/1977_chars.txt</file>
+<file>formatted/1978_chars.txt</file>
+<file>formatted/1979_chars.txt</file>
+<file>formatted/1980_chars.txt</file>
+<file>formatted/1981_chars.txt</file>
+<file>formatted/1982_chars.txt</file>
+<file>formatted/1983_chars.txt</file>
+<file>formatted/1984_chars.txt</file>
+<file>formatted/1985_chars.txt</file>
+<file>formatted/1986_chars.txt</file>
+<file>formatted/1987_chars.txt</file>
+<file>formatted/1988_chars.txt</file>
+<file>formatted/1989_chars.txt</file>
+<file>formatted/1990_chars.txt</file>
+<file>formatted/1991_chars.txt</file>
+<file>formatted/1992_chars.txt</file>
+<file>formatted/1993_chars.txt</file>
+<file>formatted/1994_chars.txt</file>
+<file>formatted/1995_chars.txt</file>
+<file>formatted/1996_chars.txt</file>
+<file>formatted/1997_chars.txt</file>
+<file>formatted/1998_chars.txt</file>
+<file>formatted/1999_chars.txt</file>
+<file>formatted/2000_chars.txt</file>
+<file>formatted/2001_chars.txt</file>
+<file>formatted/2002_chars.txt</file>
+<file>formatted/2003_chars.txt</file>
+<file>formatted/2004_chars.txt</file>
+<file>formatted/2005_chars.txt</file>
+<file>formatted/2006_chars.txt</file>
+<file>formatted/2007_chars.txt</file>
+<file>formatted/2008_chars.txt</file>
+<file>formatted/2009_chars.txt</file>
+<file>formatted/2010_chars.txt</file>
+<file>formatted/2011_chars.txt</file>
+<file>formatted/2012_chars.txt</file>
+<file>formatted/2013_chars.txt</file>
+<file>formatted/2014_chars.txt</file>
+<file>formatted/2015_chars.txt</file>
+<file>formatted/2016_chars.txt</file>
+<file>formatted/2017_chars.txt</file>
+<file>formatted/2018_chars.txt</file>
+<file>formatted/2019_chars.txt</file>
+<file>formatted/2020_chars.txt</file>
+<file>formatted/2021_chars.txt</file>
+<file>formatted/2022_chars.txt</file>
+<file>formatted/2023_chars.txt</file>
+<file>formatted/2024_chars.txt</file>
+<file>formatted/2025_chars.txt</file>
+<file>formatted/2026_chars.txt</file>
+<file>formatted/2027_chars.txt</file>
+<file>formatted/2028_chars.txt</file>
+<file>formatted/2029_chars.txt</file>
+<file>formatted/2030_chars.txt</file>
+<file>formatted/2031_chars.txt</file>
+<file>formatted/2032_chars.txt</file>
+<file>formatted/2033_chars.txt</file>
+<file>formatted/2034_chars.txt</file>
+<file>formatted/2035_chars.txt</file>
+<file>formatted/2036_chars.txt</file>
+<file>formatted/2037_chars.txt</file>
+<file>formatted/2038_chars.txt</file>
+<file>formatted/2039_chars.txt</file>
+<file>formatted/2040_chars.txt</file>
+<file>formatted/2041_chars.txt</file>
+<file>formatted/2042_chars.txt</file>
+<file>formatted/2043_chars.txt</file>
+<file>formatted/2044_chars.txt</file>
+<file>formatted/2045_chars.txt</file>
+<file>formatted/2046_chars.txt</file>
+<file>formatted/2047_chars.txt</file>
+<file>formatted/2048_chars.txt</file>
+<file>formatted/2049_chars.txt</file>
+<file>formatted/2050_chars.txt</file>
+<file>formatted/2051_chars.txt</file>
+<file>formatted/2052_chars.txt</file>
+<file>formatted/2053_chars.txt</file>
+<file>formatted/2054_chars.txt</file>
+<file>formatted/2055_chars.txt</file>
+<file>formatted/2056_chars.txt</file>
+<file>formatted/2057_chars.txt</file>
+<file>formatted/2058_chars.txt</file>
+<file>formatted/2059_chars.txt</file>
+<file>formatted/2060_chars.txt</file>
+<file>formatted/2061_chars.txt</file>
+<file>formatted/2062_chars.txt</file>
+<file>formatted/2063_chars.txt</file>
+<file>formatted/2064_chars.txt</file>
+<file>formatted/2065_chars.txt</file>
+<file>formatted/2066_chars.txt</file>
+<file>formatted/2067_chars.txt</file>
+<file>formatted/2068_chars.txt</file>
+<file>formatted/2069_chars.txt</file>
+<file>formatted/2070_chars.txt</file>
+<file>formatted/2071_chars.txt</file>
+<file>formatted/2072_chars.txt</file>
+<file>formatted/2073_chars.txt</file>
+<file>formatted/2074_chars.txt</file>
+<file>formatted/2075_chars.txt</file>
+<file>formatted/2076_chars.txt</file>
+<file>formatted/2077_chars.txt</file>
+	<file>formatted/2078_chars.txt</file>
+	<file>formatted/2079_chars.txt</file>
+	<file>formatted/2080_chars.txt</file>
+	<file>formatted/2081_chars.txt</file>
+	<file>formatted/2082_chars.txt</file>
+	<file>formatted/2083_chars.txt</file>
+	<file>formatted/2084_chars.txt</file>
+	<file>formatted/2085_chars.txt</file>
+	<file>formatted/2086_chars.txt</file>
+	<file>formatted/2087_chars.txt</file>
+	<file>formatted/2088_chars.txt</file>
+	<file>formatted/2089_chars.txt</file>
+	<file>formatted/2090_chars.txt</file>
+	<file>formatted/2091_chars.txt</file>
+	<file>formatted/2092_chars.txt</file>
+	<file>formatted/2093_chars.txt</file>
+	<file>formatted/2094_chars.txt</file>
+	<file>formatted/2095_chars.txt</file>
+	<file>formatted/2096_chars.txt</file>
+	<file>formatted/2097_chars.txt</file>
+	<file>formatted/2098_chars.txt</file>
+	<file>formatted/2099_chars.txt</file>
     <file>gif/aqua.gif</file>
     <file>gif/aries.gif</file>
     <file>gif/cancer.gif</file>

@@ -16,7 +16,8 @@
 #include <QGraphicsPixmapItem>
 
 const int errorCounter = 200;
-const QString FOLDER_PATH = ":\\ephemeris_TXT_formatted";
+const QString FOLDER_PATH = ":\\formatted";
+const QString POSTFIX = "_chars.txt";
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -67,7 +68,7 @@ void MainWindow::on_pushButton_clicked()
 {
     auto date = this->ui->dateEdit->date();
     QString year = QString::number(date.year());
-    QString filePath = FOLDER_PATH + "\\" + year + "_formatted.txt";
+    QString filePath = FOLDER_PATH + "\\" + year + POSTFIX;
     QFile * file = new QFile(filePath);
     if ( !file->open(QIODevice::ReadOnly) )
     {
