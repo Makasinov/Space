@@ -10,11 +10,11 @@ void GraphicsView::drawLines()
     scene.addLine(0,h/2,w,h/2);
     scene.addLine(0,h/4,w,h-(h/4));
     scene.addLine(w/4,0,w-(w/4),h);
-    scene.addLine(w-w/4,0,w/4-10,h);
-    scene.addLine(w-10,h/4,0,h-h/4);
+    scene.addLine(w-w/4,0,w/4,h);
+    scene.addLine(w,h/4,0,h-h/4);
 }
 
-void GraphicsView::drawSymbols()
+void GraphicsView::drawPlanets()
 {
     int w = this->size().width();
     int h = this->size().height();
@@ -22,65 +22,131 @@ void GraphicsView::drawSymbols()
     auto znak = this->scene.addSimpleText(".");
     znak->setPos(w/2.5,h/1.4);
     /////////////////////////////////////////////////////
-    QPixmap i1(":gif/sun.gif");
+    QPixmap i1(":gif/uran2.gif");
     auto sun = this->scene.addPixmap(i1);
     sun->setPos(w/4,h/4);
     sun->setOpacity(OPACITY);
 
-    QPixmap i2(":gif/mercury.gif");
+    QPixmap i2(":gif/pluto.gif");
     auto mercury = this->scene.addPixmap(i2);
     mercury->setPos(w-w/2.8,h/4);
     mercury->setOpacity(OPACITY);
 
-    QPixmap i3(":gif/leo.gif");
+    QPixmap i3(":gif/sun.gif");
     auto leo = this->scene.addPixmap(i3);
     leo->setPos(w-w/2.8,h-h/2.8);
     leo->setOpacity(OPACITY);
 
-    QPixmap i4(":gif/taurus.gif");
+    QPixmap i4(":gif/venus.gif");
     auto taurus = this->scene.addPixmap(i4);
     taurus->setPos(w/4,h-h/2.8);
     taurus->setOpacity(OPACITY);
 
-    QPixmap i5(":gif/mars.gif");
+    QPixmap i5(":gif/neptun1.gif");
     auto mars = this->scene.addPixmap(i5);
     mars->setPos(w/6,h/2.7);
     mars->setOpacity(OPACITY);
 
-    QPixmap i6(":gif/jupiter.gif");
+    QPixmap i6(":gif/venus.gif");
     auto jupiter = this->scene.addPixmap(i6);
     jupiter->setPos(w/1.36,h/2.7);
     jupiter->setOpacity(OPACITY);
 
-    QPixmap i7(":gif/saturn.gif");
+    QPixmap i7(":gif/mercury.gif");
     auto saturn = this->scene.addPixmap(i7);
     saturn->setPos(w/1.36,h/2);
     saturn->setOpacity(OPACITY);
 
-    QPixmap i8(":gif/aries.gif");
+    QPixmap i8(":gif/mars.gif");
     auto aries = this->scene.addPixmap(i8);
     aries->setPos(w/6,h/2);
     aries->setOpacity(OPACITY);
 
-    QPixmap i9(":gif/neptun1.gif");
+    QPixmap i9(":gif/saturn.gif");
     auto neptun = this->scene.addPixmap(i9);
     neptun->setPos(w/2.5,h/4.8);
     neptun->setOpacity(OPACITY);
 
-    QPixmap i10(":gif/gemini.gif");
+    QPixmap i10(":gif/mercury.gif");
     auto gemini = this->scene.addPixmap(i10);
     gemini->setPos(w/2.5,h/1.4);
     gemini->setOpacity(OPACITY);
 
-    QPixmap i11(":gif/comet.gif");
+    QPixmap i11(":gif/jupiter.gif");
     auto comet = this->scene.addPixmap(i11);
     comet->setPos(w/2,h/4.8);
     comet->setOpacity(OPACITY);
 
-    QPixmap i12(":gif/cancer.gif");
+    QPixmap i12(":gif/moon.gif");
     auto cancer = this->scene.addPixmap(i12);
     cancer->setPos(w/2,h/1.4);
     cancer->setOpacity(OPACITY);
+}
+
+void GraphicsView::drawSigns()
+{
+    int w = this->size().width();
+    int h = this->size().height();
+
+    QPixmap i1(":gif/aries.gif");               // МАРС - ОВЕН - ARIES
+    auto aries = this->scene.addPixmap(i1);
+    aries->setPos(w*0.01,h/1.8);
+    aries->setOpacity(OPACITY);
+
+    QPixmap i2(":gif/taurus.gif");              // ВЕНЕРА - ТЕЛЕЦ - TAURUS
+    auto taurus = this->scene.addPixmap(i2);
+    taurus->setPos(w*0.1,h*0.77);
+    taurus->setOpacity(OPACITY);
+
+    QPixmap i3(":gif/gemini.gif");              // МЕРКУРИЙ - БЛИЗНЕЦЫ - GEMINI
+    auto gemini = this->scene.addPixmap(i3);
+    gemini->setPos(w/2.8,h-60);
+    gemini->setOpacity(OPACITY);
+
+    QPixmap i4(":gif/cancer.gif");              // ЛУНА - РАК - CANCER
+    auto cancer = this->scene.addPixmap(i4);
+    cancer->setPos(w/1.8,h-60);
+    cancer->setOpacity(OPACITY);
+
+    QPixmap i5(":gif/leo.gif");                 // СОЛНЦЕ - ЛЕВ - LEO
+    auto leo = this->scene.addPixmap(i5);
+    leo->setPos(w-w*0.15,h*0.77);
+    leo->setOpacity(OPACITY);
+
+    QPixmap i6(":gif/virgo.gif");               // МЕРКУРИЙ - ДЕВА - VIRGO
+    auto virgo = this->scene.addPixmap(i6);
+    virgo->setPos(w-60,h/1.8);
+    virgo->setOpacity(OPACITY);
+
+    QPixmap i7(":gif/libra.gif");               // ВЕНЕРА - ВЕСЫ - LIBRA
+    auto libra = this->scene.addPixmap(i7);
+    libra->setPos(w-60,h/2.7);
+    libra->setOpacity(OPACITY);
+
+    QPixmap i8(":gif/scorpio.gif");             // ПЛУТОН - СКОРПИОН - SCORPIO
+    auto scorpio = this->scene.addPixmap(i8);
+    scorpio->setPos(w-w*0.2,h/9);
+    scorpio->setOpacity(OPACITY);
+
+    QPixmap i9(":gif/sagittar.gif");             // ЮПИТЕР - СТРЕЛЕЦ - SAGITTAR
+    auto sagittar = this->scene.addPixmap(i9);
+    sagittar->setPos(w/1.8,10);
+    sagittar->setOpacity(OPACITY);
+
+    QPixmap i10(":gif/capricor.gif");            // САТУРН - КОЗЕРОГ - CAPRICOR
+    auto capricor = this->scene.addPixmap(i10);
+    capricor->setPos(w/2.8,10);
+    capricor->setOpacity(OPACITY);
+
+    QPixmap i11(":gif/aqua.gif");                // УРАН - ВОДОЛЕЙ- AQUA
+    auto aqua = this->scene.addPixmap(i11);
+    aqua->setPos(w*0.1,h*0.13);
+    aqua->setOpacity(OPACITY);
+
+    QPixmap i12(":gif/pisces.gif");              // НЕПТУН - РЫБЫ - PISCES
+    auto pisces = this->scene.addPixmap(i12);
+    pisces->setPos(w*0.01,h/2.7);
+    pisces->setOpacity(OPACITY);
 }
 
 bool GraphicsView::setGraphics()

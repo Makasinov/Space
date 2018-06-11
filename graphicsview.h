@@ -16,7 +16,8 @@ public:
     {
         QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(setGraphics()));
         QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawLines()));
-        QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSymbols()));
+        QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawPlanets()));
+        QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSigns()));
         this->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
         this->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
         this->setScene(&scene);
@@ -35,7 +36,8 @@ signals:
 
 public slots:
     void drawLines();
-    void drawSymbols();
+    void drawPlanets();
+    void drawSigns();
     bool setGraphics();
 };
 
