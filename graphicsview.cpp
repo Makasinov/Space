@@ -5,7 +5,50 @@ void GraphicsView::drawLines()
     int w = this->size().width();
     int h = this->size().height();
 
-    scene.addEllipse(60,60,w-130,h-130);
+    const int    ECLIPSE_CORDX = w/8;
+    const int    ECLIPSE_CORDY = h/8;
+    const double ECLIPSE_SIZEX = w-w/4;
+    const double ECLIPSE_SIZEY = h-h/4;
+
+    auto ecl1 = scene.addEllipse(ECLIPSE_CORDX,
+                                 ECLIPSE_CORDY,
+                                 ECLIPSE_SIZEX,
+                                 ECLIPSE_SIZEY);
+    auto ecl2 = scene.addEllipse(ECLIPSE_CORDX+w*0.035,
+                                 ECLIPSE_CORDY+h*0.035,
+                                 ECLIPSE_SIZEX-w*0.07,
+                                 ECLIPSE_SIZEY-h*0.07);
+    auto ecl3 = scene.addEllipse(ECLIPSE_CORDX+w*0.07,
+                                 ECLIPSE_CORDY+h*0.07,
+                                 ECLIPSE_SIZEX-w*0.14,
+                                 ECLIPSE_SIZEY-h*0.14);
+    auto ecl4 = scene.addEllipse(ECLIPSE_CORDX+w*0.105,
+                                 ECLIPSE_CORDY+h*0.105,
+                                 ECLIPSE_SIZEX-w*0.21,
+                                 ECLIPSE_SIZEY-h*0.21);
+    auto ecl5 = scene.addEllipse(ECLIPSE_CORDX+w*0.14,
+                                 ECLIPSE_CORDY+h*0.14,
+                                 ECLIPSE_SIZEX-w*0.28,
+                                 ECLIPSE_SIZEY-h*0.28);
+    auto ecl6 = scene.addEllipse(ECLIPSE_CORDX+w*0.175,
+                                 ECLIPSE_CORDY+h*0.175,
+                                 ECLIPSE_SIZEX-w*0.35,
+                                 ECLIPSE_SIZEY-h*0.35);
+    auto ecl7 = scene.addEllipse(ECLIPSE_CORDX+w*0.21,
+                                 ECLIPSE_CORDY+h*0.21,
+                                 ECLIPSE_SIZEX-w*0.42,
+                                 ECLIPSE_SIZEY-h*0.42);
+    auto ecl8 = scene.addEllipse(ECLIPSE_CORDX+w*0.245,
+                                 ECLIPSE_CORDY+h*0.245,
+                                 ECLIPSE_SIZEX-w*0.49,
+                                 ECLIPSE_SIZEY-h*0.49);
+    //scene.addLine(w/2,0,w/2,h/8);
+    //scene.addLine(w,h/2,w-w/8,h/2);
+    //scene.addLine(w/2,h,w/2,h-h/8);
+    //scene.addLine(0,h/2,w/8,h/2);
+    //auto ecl2 = scene.addEllipse(100,100,w-225,h-225);
+    //auto ecl3 = scene.addEllipse(140,140,w-300,h-300);
+
     scene.addLine(w/2,0,w/2,h);
     scene.addLine(0,h/2,w,h/2);
     scene.addLine(0,h/4,w,h-(h/4));
@@ -19,9 +62,9 @@ void GraphicsView::drawPlanets()
     int w = this->size().width();
     int h = this->size().height();
 
-    auto znak = this->scene.addSimpleText(".");
-    znak->setPos(w/2.5,h/1.4);
-    /////////////////////////////////////////////////////
+    // auto znak = this->scene.addSimpleText(".");
+    // znak->setPos(w/2.5,h/1.4);
+
     QPixmap i1(":gif/uran2.gif");
     auto sun = this->scene.addPixmap(i1);
     sun->setPos(w/4,h/4);
@@ -44,12 +87,12 @@ void GraphicsView::drawPlanets()
 
     QPixmap i5(":gif/neptun1.gif");
     auto mars = this->scene.addPixmap(i5);
-    mars->setPos(w/6,h/2.7);
+    mars->setPos(w/6,h/2.55);
     mars->setOpacity(OPACITY);
 
     QPixmap i6(":gif/venus.gif");
     auto jupiter = this->scene.addPixmap(i6);
-    jupiter->setPos(w/1.36,h/2.7);
+    jupiter->setPos(w/1.36,h/2.55);
     jupiter->setOpacity(OPACITY);
 
     QPixmap i7(":gif/mercury.gif");
