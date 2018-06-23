@@ -14,8 +14,9 @@ void GraphicsView::drawSpacePlanets()
     if (h > w) scaling = w * 0.0008;
         else scaling = h * 0.0008;
     earth->setScale(scaling);
-    // точки смещения: 20,    , 180, 300, 340
-    double angle = 30;
+
+    double angle = 355;
+
     double x = cos(2 * M_PI * angle / 360) * ECLIPSE_RADIUSX + w/2 - 2;
     double y = sin(2 * M_PI * angle / 360) * ECLIPSE_RADIUSY + h/2 - 2;
 
@@ -23,17 +24,29 @@ void GraphicsView::drawSpacePlanets()
         x -= w * 0.03;
     else if (angle >= 5 && angle <= 24)
         x -= w * 0.035;
-    else if (angle >= 25 && angle <= 44)
+    else if (angle >= 25 && angle <= 34)
         x -= w * 0.04;
-    //if (angle >= 360)
-    //    y += h * 0.05;
-
-    //qDebug() << ;
+    else if (angle >= 35 && angle <= 44)
+        x -= w * 0.045;
+    else if (angle >= 45 && angle <= 54)
+        x -= w * 0.055;
+    else if (angle <= 79)
+        y -= h * 0.04;
+    else if (angle <= 119)
+        y -= h * 0.035;
+    else if (angle <= 149)
+        y -= h * 0.03;
+    else if (angle <= 169)
+        y -= h * 0.04;
+    else if (angle <= 189)
+        y -= h * 0.015;
+    else if (angle >= 295)
+        x -= w * 0.02;
 
     earth->setPos(x,y);
     earth->setFlag(QGraphicsItem::ItemIsMovable);
-    QObject::connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(myDebug()));
-    qDebug() << earth->pos().x() << earth->pos().y();
+    //QObject::connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(myDebug()));
+    //qDebug() << earth->pos().x() << earth->pos().y();
 }
 
 void GraphicsView::drawLines()
