@@ -7,6 +7,7 @@
 #include <QGraphicsView>
 #include <QGraphicsSimpleTextItem>
 #include <QGraphicsPixmapItem>
+#include <QDebug>
 
 class GraphicsView : public QGraphicsView
 {
@@ -18,6 +19,7 @@ public:
         QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawLines()));
         QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawPlanets()));
         QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSigns()));
+        QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSpacePlanets()));
         this->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
         this->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
         this->setScene(&scene);
@@ -30,11 +32,17 @@ public:
 private:
     const double OPACITY = 0.1;
     QWidget * parent;
+    QGraphicsEllipseItem ecl1,ecl2,ecl3,ecl4,ecl5,ecl6,ecl7,ecl8;
 
 signals:
     void resizeEvent(QResizeEvent * event);
 
 public slots:
+    void myDebug()
+    {
+        qDebug() << "debugMe ;)";
+    }
+    void drawSpacePlanets();
     void drawLines();
     void drawPlanets();
     void drawSigns();

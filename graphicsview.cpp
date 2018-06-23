@@ -1,4 +1,40 @@
 #include "graphicsview.h"
+#include <QtMath>
+
+void GraphicsView::drawSpacePlanets()
+{
+    int w = this->size().width();
+    int h = this->size().height();
+    const double ECLIPSE_RADIUSX = ( w - w / 4 ) / 2;
+    const double ECLIPSE_RADIUSY = ( h - h / 4 ) / 2;
+
+    QPixmap pixmap(":gif/testPlanet.gif");
+    QGraphicsPixmapItem * earth = this->scene.addPixmap(pixmap);
+    double scaling = 0;
+    if (h > w) scaling = w * 0.0008;
+        else scaling = h * 0.0008;
+    earth->setScale(scaling);
+    // точки смещения: 20,    , 180, 300, 340
+    double angle = 30;
+    double x = cos(2 * M_PI * angle / 360) * ECLIPSE_RADIUSX + w/2 - 2;
+    double y = sin(2 * M_PI * angle / 360) * ECLIPSE_RADIUSY + h/2 - 2;
+
+    if (angle >= 345 || angle <= 4)
+        x -= w * 0.03;
+    else if (angle >= 5 && angle <= 24)
+        x -= w * 0.035;
+    else if (angle >= 25 && angle <= 44)
+        x -= w * 0.04;
+    //if (angle >= 360)
+    //    y += h * 0.05;
+
+    //qDebug() << ;
+
+    earth->setPos(x,y);
+    earth->setFlag(QGraphicsItem::ItemIsMovable);
+    QObject::connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(myDebug()));
+    qDebug() << earth->pos().x() << earth->pos().y();
+}
 
 void GraphicsView::drawLines()
 {
@@ -42,13 +78,6 @@ void GraphicsView::drawLines()
                                  ECLIPSE_CORDY+h*0.245,
                                  ECLIPSE_SIZEX-w*0.49,
                                  ECLIPSE_SIZEY-h*0.49);
-    //scene.addLine(w/2,0,w/2,h/8);
-    //scene.addLine(w,h/2,w-w/8,h/2);
-    //scene.addLine(w/2,h,w/2,h-h/8);
-    //scene.addLine(0,h/2,w/8,h/2);
-    //auto ecl2 = scene.addEllipse(100,100,w-225,h-225);
-    //auto ecl3 = scene.addEllipse(140,140,w-300,h-300);
-
     scene.addLine(w/2,0,w/2,h);
     scene.addLine(0,h/2,w,h/2);
     scene.addLine(0,h/4,w,h-(h/4));
@@ -61,9 +90,6 @@ void GraphicsView::drawPlanets()
 {
     int w = this->size().width();
     int h = this->size().height();
-
-    // auto znak = this->scene.addSimpleText(".");
-    // znak->setPos(w/2.5,h/1.4);
 
     QPixmap i1(":gif/uran2.gif");
     auto sun = this->scene.addPixmap(i1);
