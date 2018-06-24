@@ -28,6 +28,17 @@ public:
         this->setGeometry(1000,500,500,500);
         this->setWindowTitle("Карта созвездий");
     }
+    static void getXY(double * x, double * y,
+                      const int angle,
+                      const int ECLIPSE_RADIUSX,
+                      const int ECLIPSE_RADIUSY,
+                      const int w,
+                      const int h);
+    static void correctXY(const int angle,
+                          double * x,
+                          double * y,
+                          const int w,
+                          const int h);
     QGraphicsScene scene;
 private:
     const double OPACITY = 0.1;

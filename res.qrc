@@ -200,7 +200,7 @@
 	<file>formatted/2097_chars.txt</file>
 	<file>formatted/2098_chars.txt</file>
 	<file>formatted/2099_chars.txt</file>
-	<file>gif/testPlanet.png</file>
+	
 	<file>gif/testPlanet.gif</file>
     <file>gif/aqua.gif</file>
 	<file>gif/moon.gif</file>
@@ -208,7 +208,6 @@
     <file>gif/cancer.gif</file>
     <file>gif/capricor.gif</file>
 	<file>gif/comet.gif</file>
-	<file>gif/earth1.gif</file>
 	<file>gif/gemini.gif</file>
 	<file>gif/jupiter.gif</file>
 	<file>gif/leo.gif</file>
@@ -226,5 +225,23 @@
 	<file>gif/uran2.gif</file>
 	<file>gif/venus.gif</file>
     <file>gif/virgo.gif</file>
+	
+	<file>gif/earth.png</file>
+	<file>gif/jupiter.png</file>
+	<file>gif/mars.png</file>
+	<file>gif/mercury.png</file>
+	<file>gif/moon.png</file>
+	<file>gif/neptune.png</file>
+	<file>gif/pluto.png</file>
+	<file>gif/saturn.png</file>
+	<file>gif/sun.png</file>
+	<file>gif/uranus.png</file>
+	<file>gif/venus.png</file>
+	
 </qresource>
 </RCC>
+
+
+
+
+

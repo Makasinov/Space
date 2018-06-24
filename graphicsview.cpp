@@ -1,52 +1,129 @@
 #include "graphicsview.h"
 #include <QtMath>
 
+void GraphicsView::getXY(double * x, double * y,
+                         const int angle,
+                         const int ECLIPSE_RADIUSX,
+                         const int ECLIPSE_RADIUSY,
+                         const int w,
+                         const int h)
+{
+    *(x) = cos(2 * M_PI * angle / 360) * ECLIPSE_RADIUSX + w/2 - 2;
+    *(y) = sin(2 * M_PI * angle / 360) * ECLIPSE_RADIUSY + h/2 - 2;
+    correctXY(angle,x,y,w,h);
+}
+
+void GraphicsView::correctXY(const int angle, double * x, double * y, const int w, const int h)
+{
+    if (angle >= 345 || angle <= 4)
+        *(x) -= w * 0.03;
+    else if (angle >= 5 && angle <= 24)
+        *(x) -= w * 0.035;
+    else if (angle >= 25 && angle <= 34)
+        *(x) -= w * 0.04;
+    else if (angle >= 35 && angle <= 44)
+        *(x) -= w * 0.045;
+    else if (angle >= 45 && angle <= 54)
+        *(x) -= w * 0.055;
+    else if (angle <= 79)
+        *(y) -= h * 0.04;
+    else if (angle <= 119)
+        *(y) -= h * 0.035;
+    else if (angle <= 149)
+        *(y) -= h * 0.03;
+    else if (angle <= 169)
+        *(y) -= h * 0.04;
+    else if (angle <= 189)
+        *(y) -= h * 0.015;
+    else if (angle >= 295)
+        *(x) -= w * 0.02;
+}
+
 void GraphicsView::drawSpacePlanets()
 {
     int w = this->size().width();
     int h = this->size().height();
-    const double ECLIPSE_RADIUSX = ( w - w / 4 ) / 2;
-    const double ECLIPSE_RADIUSY = ( h - h / 4 ) / 2;
 
-    QPixmap pixmap(":gif/testPlanet.gif");
-    QGraphicsPixmapItem * earth = this->scene.addPixmap(pixmap);
     double scaling = 0;
-    if (h > w) scaling = w * 0.0008;
-        else scaling = h * 0.0008;
+    if (h > w) scaling = w * 0.0006;
+        else scaling = h * 0.0006;
+
+    double angle = 130;
+    double x = 0, y = 0;
+
+    const double ECLIPSE_RADIUSX1 = ( ( w - w / 4 ) / 2 ) - w * 0.002;       // 1 круг
+    const double ECLIPSE_RADIUSY1 = ( ( h - h / 4 ) / 2 ) - h * 0.002;       // 2 круг
+
+    const double ECLIPSE_RADIUSX2 = ( ( w - w / 4 ) / 2 ) - w * 0.035;       // 2 круг
+    const double ECLIPSE_RADIUSY2 = ( ( h - h / 4 ) / 2 ) - h * 0.035;       // 2 круг
+
+    const double ECLIPSE_RADIUSX3 = ( ( w - w / 4 ) / 2 ) - w * 0.075;       // 3 круг
+    const double ECLIPSE_RADIUSY3 = ( ( h - h / 4 ) / 2 ) - h * 0.075;       // 3 круг
+
+    const double ECLIPSE_RADIUSX4 = ( ( w - w / 4 ) / 2 ) - w * 0.107;       // 4 круг
+    const double ECLIPSE_RADIUSY4 = ( ( h - h / 4 ) / 2 ) - h * 0.107;       // 4 круг
+
+    const double ECLIPSE_RADIUSX5 = ( ( w - w / 4 ) / 2 ) - w * 0.145;       // 5 круг
+    const double ECLIPSE_RADIUSY5 = ( ( h - h / 4 ) / 2 ) - h * 0.145;       // 5 круг
+
+    const double ECLIPSE_RADIUSX6 = ( ( w - w / 4 ) / 2 ) - w * 0.18;        // 6 круг
+    const double ECLIPSE_RADIUSY6 = ( ( h - h / 4 ) / 2 ) - h * 0.18;        // 6 круг
+
+    const double ECLIPSE_RADIUSX7 = ( ( w - w / 4 ) / 2 ) - w * 0.215;       // 7 круг
+    const double ECLIPSE_RADIUSY7 = ( ( h - h / 4 ) / 2 ) - h * 0.215;       // 7 круг
+
+    QPixmap pixmap(":gif/earth.png");
+    QGraphicsPixmapItem * earth = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,130,ECLIPSE_RADIUSX1,ECLIPSE_RADIUSY1,w,h);
+    earth->setPos(x,y);
     earth->setScale(scaling);
 
-    double angle = 355;
+    pixmap.load(":gif/mars.png");
+    QGraphicsPixmapItem * mars = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,180,ECLIPSE_RADIUSX2,ECLIPSE_RADIUSY2,w,h);
+    mars->setPos(x,y);
+    mars->setScale(scaling);
 
-    double x = cos(2 * M_PI * angle / 360) * ECLIPSE_RADIUSX + w/2 - 2;
-    double y = sin(2 * M_PI * angle / 360) * ECLIPSE_RADIUSY + h/2 - 2;
+    pixmap.load(":gif/mercury.png");
+    QGraphicsPixmapItem * mercury = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,220,ECLIPSE_RADIUSX3,ECLIPSE_RADIUSY3,w,h);
+    mercury->setPos(x,y);
+    mercury->setScale(scaling);
 
-    if (angle >= 345 || angle <= 4)
-        x -= w * 0.03;
-    else if (angle >= 5 && angle <= 24)
-        x -= w * 0.035;
-    else if (angle >= 25 && angle <= 34)
-        x -= w * 0.04;
-    else if (angle >= 35 && angle <= 44)
-        x -= w * 0.045;
-    else if (angle >= 45 && angle <= 54)
-        x -= w * 0.055;
-    else if (angle <= 79)
-        y -= h * 0.04;
-    else if (angle <= 119)
-        y -= h * 0.035;
-    else if (angle <= 149)
-        y -= h * 0.03;
-    else if (angle <= 169)
-        y -= h * 0.04;
-    else if (angle <= 189)
-        y -= h * 0.015;
-    else if (angle >= 295)
-        x -= w * 0.02;
+    pixmap.load(":gif/saturn.png");
+    QGraphicsPixmapItem * saturn= this->scene.addPixmap(pixmap);
+    getXY(&x,&y,270,ECLIPSE_RADIUSX6,ECLIPSE_RADIUSY6,w,h);
+    saturn->setPos(x,y);
+    saturn->setScale(scaling);
 
-    earth->setPos(x,y);
-    earth->setFlag(QGraphicsItem::ItemIsMovable);
-    //QObject::connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(myDebug()));
-    //qDebug() << earth->pos().x() << earth->pos().y();
+    pixmap.load(":gif/neptune.png");
+    QGraphicsPixmapItem * neptune = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,250,ECLIPSE_RADIUSX5,ECLIPSE_RADIUSY5,w,h);
+    neptune->setPos(x,y);
+    neptune->setScale(scaling);
+
+    pixmap.load(":gif/pluto.png");
+    QGraphicsPixmapItem * pluto = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,50,ECLIPSE_RADIUSX4,ECLIPSE_RADIUSY4,w,h);
+    pluto->setPos(x,y);
+    pluto->setScale(scaling);
+
+    pixmap.load(":gif/venus.png");
+    QGraphicsPixmapItem * venus = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,20,ECLIPSE_RADIUSX7,ECLIPSE_RADIUSY7,w,h);
+    venus->setPos(x,y);
+    venus->setScale(scaling);
+
+    pixmap.load(":gif/uranus.png");
+    QGraphicsPixmapItem * uranus = this->scene.addPixmap(pixmap);
+    getXY(&x,&y,100,ECLIPSE_RADIUSX3,ECLIPSE_RADIUSY3,w,h);
+    uranus->setPos(x,y);
+    uranus->setScale(scaling);
+
+    pixmap.load(":gif/sun.png");
+    QGraphicsPixmapItem * sun = this->scene.addPixmap(pixmap);
+    sun->setPos(w/2-w*0.04, h/2-h*0.04);
+    sun->setScale(scaling * 1.7);
 }
 
 void GraphicsView::drawLines()
