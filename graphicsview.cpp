@@ -1,13 +1,43 @@
 #include "graphicsview.h"
 #include <QtMath>
 
+GraphicsView::GraphicsView(QWidget *parent)
+{
+    hash.insert(29,"A");
+    hash.insert(59,"B");
+    hash.insert(89,"C");
+    hash.insert(119,"D");
+    hash.insert(149,"E");
+    hash.insert(179,"F");
+    hash.insert(209,"G");
+    hash.insert(209,"O");
+    hash.insert(209,"I");
+    hash.insert(209,"J");
+    hash.insert(329,"L");
+    hash.insert(361,"K");
+    //  M
+    //  N
+    QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(setGraphics()));
+    QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawLines()));
+    QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawPlanets()));
+    QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSigns()));
+    QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSpacePlanets()));
+    this->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
+    this->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
+    this->setScene(&scene);
+    this->parent = parent;
+    this->setWindowTitle(tr("Эфемериды"));
+    this->setGeometry(1000,500,500,500);
+    this->setWindowTitle("Карта созвездий");
+}
+
 void GraphicsView::getXY(double * x, double * y,
                          const int angle,
                          const int ECLIPSE_RADIUSX,
-                         const int ECLIPSE_RADIUSY,
-                         const int w,
-                         const int h)
+                         const int ECLIPSE_RADIUSY)
 {
+    int w = this->size().width();
+    int h = this->size().height();
     *(x) = cos(2 * M_PI * angle / 360) * ECLIPSE_RADIUSX + w/2 - 2;
     *(y) = sin(2 * M_PI * angle / 360) * ECLIPSE_RADIUSY + h/2 - 2;
     correctXY(angle,x,y,w,h);
@@ -39,57 +69,98 @@ void GraphicsView::correctXY(const int angle, double * x, double * y, const int 
         *(x) -= w * 0.02;
 }
 
-void GraphicsView::drawSpacePlanets()
+void GraphicsView::getEllipse(double * x, double * y)
 {
     int w = this->size().width();
     int h = this->size().height();
+    int varW = ( ( w - w / 4 ) / 2 );
+    int varH = ( ( h - h / 4 ) / 2 );
 
-    double scaling = 0;
-    if (h > w) scaling = w * 0.0006;
-        else scaling = h * 0.0006;
+    const double ECLIPSE_RADIUSX1 = varW - w * 0.002;       // 1 круг
+    const double ECLIPSE_RADIUSY1 = varH - h * 0.002;       // 2 круг
 
-    double angle = 130;
+    const double ECLIPSE_RADIUSX2 = varW - w * 0.035;       // 2 круг
+    const double ECLIPSE_RADIUSY2 = varH - h * 0.035;       // 2 круг
+
+    const double ECLIPSE_RADIUSX3 = varW - w * 0.075;       // 3 круг
+    const double ECLIPSE_RADIUSY3 = varH - h * 0.075;       // 3 круг
+
+    const double ECLIPSE_RADIUSX4 = varW - w * 0.107;       // 4 круг
+    const double ECLIPSE_RADIUSY4 = varH - h * 0.107;       // 4 круг
+
+    const double ECLIPSE_RADIUSX5 = varW - w * 0.145;       // 5 круг
+    const double ECLIPSE_RADIUSY5 = varH - h * 0.145;       // 5 круг
+
+    const double ECLIPSE_RADIUSX6 = varW - w * 0.18;        // 6 круг
+    const double ECLIPSE_RADIUSY6 = varH - h * 0.18;        // 6 круг
+
+    const double ECLIPSE_RADIUSX7 = varW - w * 0.215;       // 7 круг
+    const double ECLIPSE_RADIUSY7 = varH - h * 0.215;       // 7 круг
+    (*x) = ECLIPSE_RADIUSX4;
+    (*y) = ECLIPSE_RADIUSY4;
+}
+
+void GraphicsView::setParams(int number, QGraphicsPixmapItem * planet)
+{
+    QString dataString = this->table->item(0,number+1)->text();
+    QChar symbol = dataString.at(dataString.length()-1);
+    QVector<QChar> vec = {'a','b','c','d','e','f','g','h','i','j','k','l'};
+    if (planet == NULL || !vec.contains(symbol.toLatin1()))
+    {
+        qDebug() << "Error in if statement -> " << planet << "\n-> " << symbol;
+        return;
+    }
+    int h = this->size().height();
+    int w = this->size().width();
+
     double x = 0, y = 0;
+    double radiusX,radiusY;
+    int angle = 0;
 
-    const double ECLIPSE_RADIUSX1 = ( ( w - w / 4 ) / 2 ) - w * 0.002;       // 1 круг
-    const double ECLIPSE_RADIUSY1 = ( ( h - h / 4 ) / 2 ) - h * 0.002;       // 2 круг
+    switch (symbol.toLatin1()) {
+    case 'j':
+        angle = 290;
+        break;
+    case 'i':
+        angle = 150;
+        break;
+    case 'k':
+        angle = 100;
+        break;
+    default:
+        angle = 0;
+        break;
+    }
+    qDebug() << symbol << "\tangle = " << angle;
 
-    const double ECLIPSE_RADIUSX2 = ( ( w - w / 4 ) / 2 ) - w * 0.035;       // 2 круг
-    const double ECLIPSE_RADIUSY2 = ( ( h - h / 4 ) / 2 ) - h * 0.035;       // 2 круг
+    getEllipse(&radiusX,&radiusY);
+    getXY(&x,&y,angle,radiusX,radiusY);
+    planet->setPos(x,y);
+    planet->setScale(h>w?w * 0.0006:h * 0.0006);
+}
 
-    const double ECLIPSE_RADIUSX3 = ( ( w - w / 4 ) / 2 ) - w * 0.075;       // 3 круг
-    const double ECLIPSE_RADIUSY3 = ( ( h - h / 4 ) / 2 ) - h * 0.075;       // 3 круг
-
-    const double ECLIPSE_RADIUSX4 = ( ( w - w / 4 ) / 2 ) - w * 0.107;       // 4 круг
-    const double ECLIPSE_RADIUSY4 = ( ( h - h / 4 ) / 2 ) - h * 0.107;       // 4 круг
-
-    const double ECLIPSE_RADIUSX5 = ( ( w - w / 4 ) / 2 ) - w * 0.145;       // 5 круг
-    const double ECLIPSE_RADIUSY5 = ( ( h - h / 4 ) / 2 ) - h * 0.145;       // 5 круг
-
-    const double ECLIPSE_RADIUSX6 = ( ( w - w / 4 ) / 2 ) - w * 0.18;        // 6 круг
-    const double ECLIPSE_RADIUSY6 = ( ( h - h / 4 ) / 2 ) - h * 0.18;        // 6 круг
-
-    const double ECLIPSE_RADIUSX7 = ( ( w - w / 4 ) / 2 ) - w * 0.215;       // 7 круг
-    const double ECLIPSE_RADIUSY7 = ( ( h - h / 4 ) / 2 ) - h * 0.215;       // 7 круг
-
+void GraphicsView::drawSpacePlanets()
+{
     QPixmap pixmap(":gif/earth.png");
+
+    /*
     QGraphicsPixmapItem * earth = this->scene.addPixmap(pixmap);
+    setParams(earth,);
     getXY(&x,&y,130,ECLIPSE_RADIUSX1,ECLIPSE_RADIUSY1,w,h);
     earth->setPos(x,y);
     earth->setScale(scaling);
+    */
+
 
     pixmap.load(":gif/mars.png");
     QGraphicsPixmapItem * mars = this->scene.addPixmap(pixmap);
-    getXY(&x,&y,180,ECLIPSE_RADIUSX2,ECLIPSE_RADIUSY2,w,h);
-    mars->setPos(x,y);
-    mars->setScale(scaling);
+    setParams(5,mars);
 
     pixmap.load(":gif/mercury.png");
     QGraphicsPixmapItem * mercury = this->scene.addPixmap(pixmap);
-    getXY(&x,&y,220,ECLIPSE_RADIUSX3,ECLIPSE_RADIUSY3,w,h);
-    mercury->setPos(x,y);
-    mercury->setScale(scaling);
+    setParams(3,mercury);
 
+    /*
     pixmap.load(":gif/saturn.png");
     QGraphicsPixmapItem * saturn= this->scene.addPixmap(pixmap);
     getXY(&x,&y,270,ECLIPSE_RADIUSX6,ECLIPSE_RADIUSY6,w,h);
@@ -124,6 +195,7 @@ void GraphicsView::drawSpacePlanets()
     QGraphicsPixmapItem * sun = this->scene.addPixmap(pixmap);
     sun->setPos(w/2-w*0.04, h/2-h*0.04);
     sun->setScale(scaling * 1.7);
+    */
 }
 
 void GraphicsView::drawLines()
@@ -182,62 +254,62 @@ void GraphicsView::drawPlanets()
     int h = this->size().height();
 
     QPixmap i1(":gif/uran2.gif");
-    auto sun = this->scene.addPixmap(i1);
+   QGraphicsPixmapItem * sun = this->scene.addPixmap(i1);
     sun->setPos(w/4,h/4);
     sun->setOpacity(OPACITY);
 
     QPixmap i2(":gif/pluto.gif");
-    auto mercury = this->scene.addPixmap(i2);
+   QGraphicsPixmapItem * mercury = this->scene.addPixmap(i2);
     mercury->setPos(w-w/2.8,h/4);
     mercury->setOpacity(OPACITY);
 
     QPixmap i3(":gif/sun.gif");
-    auto leo = this->scene.addPixmap(i3);
+   QGraphicsPixmapItem * leo = this->scene.addPixmap(i3);
     leo->setPos(w-w/2.8,h-h/2.8);
     leo->setOpacity(OPACITY);
 
     QPixmap i4(":gif/venus.gif");
-    auto taurus = this->scene.addPixmap(i4);
+   QGraphicsPixmapItem * taurus = this->scene.addPixmap(i4);
     taurus->setPos(w/4,h-h/2.8);
     taurus->setOpacity(OPACITY);
 
     QPixmap i5(":gif/neptun1.gif");
-    auto mars = this->scene.addPixmap(i5);
+   QGraphicsPixmapItem * mars = this->scene.addPixmap(i5);
     mars->setPos(w/6,h/2.55);
     mars->setOpacity(OPACITY);
 
     QPixmap i6(":gif/venus.gif");
-    auto jupiter = this->scene.addPixmap(i6);
+   QGraphicsPixmapItem * jupiter = this->scene.addPixmap(i6);
     jupiter->setPos(w/1.36,h/2.55);
     jupiter->setOpacity(OPACITY);
 
     QPixmap i7(":gif/mercury.gif");
-    auto saturn = this->scene.addPixmap(i7);
+   QGraphicsPixmapItem * saturn = this->scene.addPixmap(i7);
     saturn->setPos(w/1.36,h/2);
     saturn->setOpacity(OPACITY);
 
     QPixmap i8(":gif/mars.gif");
-    auto aries = this->scene.addPixmap(i8);
+   QGraphicsPixmapItem * aries = this->scene.addPixmap(i8);
     aries->setPos(w/6,h/2);
     aries->setOpacity(OPACITY);
 
     QPixmap i9(":gif/saturn.gif");
-    auto neptun = this->scene.addPixmap(i9);
+   QGraphicsPixmapItem * neptun = this->scene.addPixmap(i9);
     neptun->setPos(w/2.5,h/4.8);
     neptun->setOpacity(OPACITY);
 
     QPixmap i10(":gif/mercury.gif");
-    auto gemini = this->scene.addPixmap(i10);
+   QGraphicsPixmapItem * gemini = this->scene.addPixmap(i10);
     gemini->setPos(w/2.5,h/1.4);
     gemini->setOpacity(OPACITY);
 
     QPixmap i11(":gif/jupiter.gif");
-    auto comet = this->scene.addPixmap(i11);
+   QGraphicsPixmapItem * comet = this->scene.addPixmap(i11);
     comet->setPos(w/2,h/4.8);
     comet->setOpacity(OPACITY);
 
     QPixmap i12(":gif/moon.gif");
-    auto cancer = this->scene.addPixmap(i12);
+    QGraphicsPixmapItem * cancer = this->scene.addPixmap(i12);
     cancer->setPos(w/2,h/1.4);
     cancer->setOpacity(OPACITY);
 }

@@ -203,12 +203,12 @@
              </column>
              <column>
               <property name="text">
-               <string>A</string>
+               <string>Солнце</string>
               </property>
              </column>
              <column>
               <property name="text">
-               <string>Полночь</string>
+               <string>Луна</string>
               </property>
              </column>
              <column>
@@ -233,7 +233,7 @@
              </column>
              <column>
               <property name="text">
-               <string>G</string>
+               <string>Сатурн</string>
               </property>
              </column>
              <column>
@@ -249,27 +249,6 @@
              <column>
               <property name="text">
                <string>Плутон</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Узел
-кармы</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>K</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>M</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>N</string>
               </property>
              </column>
             </widget>

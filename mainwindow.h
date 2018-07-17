@@ -24,10 +24,6 @@ signals:
     void hideEvent(QHideEvent *event);
 
 private slots:
-    void on_dateEdit_userDateChanged(const QDate &date);
-
-    void on_dateEdit_editingFinished();
-
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();

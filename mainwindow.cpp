@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Карта созвездий");
     QWidget::connect(this,SIGNAL(hideEvent(QHideEvent*)),myView,SLOT(close()));
 }
 
@@ -31,8 +32,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-void MainWindow::on_dateEdit_userDateChanged(const QDate &date){}
 
 QString getMonth(int month)
 {
@@ -53,8 +52,6 @@ QString getMonth(int month)
     default: return NULL;
     }
 }
-
-void MainWindow::on_dateEdit_editingFinished(){}
 
 void MainWindow::removeOtherRows(QTableWidget &table, const int number)
 {
@@ -138,18 +135,25 @@ void MainWindow::on_pushButton_clicked()
         if ( this->ui->action_6->isChecked() ) table->resizeColumnsToContents();
         table->removeRow(table->rowCount()-1);
         removeOtherRows(*table,this->ui->dateEdit->date().day());
+        //table->removeColumn(1);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    myView->setGeometry(
-        QStyle::alignedRect(
-            Qt::LeftToRight,
-            Qt::AlignCenter,
-            myView->size(),
-            qApp->desktop()->availableGeometry()
-        )
-    );
-    myView->show();
-    myView->setFocus();
+    if(this->ui->tableWidget->itemAt(0,0) != NULL)
+    {
+        delete myView ;
+        myView = new GraphicsView();
+        myView->setTable(this->ui->tableWidget);
+        myView->setGeometry(
+                    QStyle::alignedRect(
+                        Qt::LeftToRight,
+                        Qt::AlignCenter,
+                        myView->size(),
+                        qApp->desktop()->availableGeometry()
+                        )
+                    );
+        myView->show();
+        myView->setFocus();
+    } else QMessageBox::information(this,"Выберите дату","Не выбрана дата построения карты");
 }
