@@ -9,6 +9,8 @@
 #include <QGraphicsPixmapItem>
 #include <QTableWidget>
 #include <QDebug>
+#include <QMouseEvent>
+#include <QEvent>
 
 class GraphicsView : public QGraphicsView
 {
@@ -33,11 +35,21 @@ public:
     QGraphicsScene scene;
 
 private:
+    QString tip = "";
     QHash<int,QString> hash;
     QTableWidget * table;
     const double OPACITY = 0.1;
     QWidget * parent;
     QGraphicsEllipseItem ecl1,ecl2,ecl3,ecl4,ecl5,ecl6,ecl7,ecl8;
+    QGraphicsPixmapItem * moon;
+    QGraphicsPixmapItem * mercury;
+    QGraphicsPixmapItem * venus;
+    QGraphicsPixmapItem * mars;
+    QGraphicsPixmapItem * jupiter;
+    QGraphicsPixmapItem * saturn;
+    QGraphicsPixmapItem * uranus;
+    QGraphicsPixmapItem * neptune;
+    QGraphicsPixmapItem * pluto;
 
 signals:
     void resizeEvent(QResizeEvent * event);
