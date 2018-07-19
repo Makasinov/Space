@@ -50,15 +50,12 @@ private:
     QGraphicsPixmapItem * uranus;
     QGraphicsPixmapItem * neptune;
     QGraphicsPixmapItem * pluto;
+    QGraphicsPixmapItem * sun;
 
 signals:
     void resizeEvent(QResizeEvent * event);
 
 public slots:
-    void myDebug()
-    {
-        qDebug() << "debugMe ;)";
-    }
     void drawSpacePlanets();
     void drawLines();
     void drawPlanets();

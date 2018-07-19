@@ -1,5 +1,4 @@
 #include "graphicsview.h"
-#include <QtMath>
 
 GraphicsView::GraphicsView(QWidget *parent)
 {
@@ -15,14 +14,13 @@ GraphicsView::GraphicsView(QWidget *parent)
     hash.insert(209,"J");
     hash.insert(329,"L");
     hash.insert(361,"K");
-    //  M
-    //  N
+
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(setGraphics()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawLines()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawPlanets()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSigns()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSpacePlanets()));
-    //QObject::connect(this,SIGNAL());
+
     this->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     this->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     this->setScene(&scene);
@@ -97,6 +95,7 @@ void GraphicsView::getEllipse(double * x, double * y)
 
     const double ECLIPSE_RADIUSX7 = varW - w * 0.215;       // 7 круг
     const double ECLIPSE_RADIUSY7 = varH - h * 0.215;       // 7 круг
+
     (*x) = ECLIPSE_RADIUSX1;
     (*y) = ECLIPSE_RADIUSY1;
 }
@@ -153,16 +152,19 @@ void GraphicsView::setParams(int number, QGraphicsPixmapItem * planet)
     case 'l':
         angle = 183;
         break;
-    default:
-        angle = 0;
-        break;
     }
 
     QString mid = dataString;
     int pos = 0;
     for(auto it = mid.begin(); (*it).isNumber(); it++, pos++ );
     mid = mid.mid(0,pos);
-    int degree = mid.toInt();
+    bool Retragrad = false;
+    if (dataString.at(dataString.length()-2) == 'R') Retragrad = true;
+    int degree = 0;
+    if (!Retragrad) degree = mid.toInt();
+        else degree = (30 - mid.toInt());
+    degree *= 0.68;;
+
     angle += degree;
     //  qDebug() << symbol << "\tangle = " << angle;
 
@@ -174,7 +176,12 @@ void GraphicsView::setParams(int number, QGraphicsPixmapItem * planet)
 
 void GraphicsView::drawSpacePlanets()
 {
-    QPixmap pixmap(":gif/moon.png");
+    QPixmap pixmap(":gif/sun.png");
+    sun = this->scene.addPixmap(pixmap);
+    setParams(1,sun);
+    sun->setToolTip("Солнце");
+
+    pixmap.load(":gif/moon.png");
     moon = this->scene.addPixmap(pixmap);
     setParams(2,moon);
     moon->setToolTip("Луна");
