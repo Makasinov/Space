@@ -2,18 +2,16 @@
 
 GraphicsView::GraphicsView(QWidget *parent)
 {
-    hash.insert(29,"A");
-    hash.insert(59,"B");
-    hash.insert(89,"C");
-    hash.insert(119,"D");
-    hash.insert(149,"E");
-    hash.insert(179,"F");
-    hash.insert(209,"G");
-    hash.insert(209,"O");
-    hash.insert(209,"I");
-    hash.insert(209,"J");
-    hash.insert(329,"L");
-    hash.insert(361,"K");
+    hash.insert(29,"A");    //  СОЛНЦЕ
+    hash.insert(59,"B");    //  ЛУНА
+    hash.insert(89,"C");    //  МЕРКУРИЙ
+    hash.insert(119,"D");   //  ВЕНЕРА
+    hash.insert(149,"E");   //  МАРС
+    hash.insert(179,"F");   //  ЮПИТЕР
+    hash.insert(209,"G");   //  САТУРН
+    hash.insert(209,"O");   //  УРАН
+    hash.insert(209,"I");   //  НЕПТУН
+    hash.insert(209,"J");   //  ПЛУТОН
 
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(setGraphics()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawLines()));
@@ -28,6 +26,7 @@ GraphicsView::GraphicsView(QWidget *parent)
     this->setWindowTitle(tr("Эфемериды"));
     this->setGeometry(1000,500,500,500);
     this->setWindowTitle("Карта созвездий");
+    qDebug() << distanceArray[1][1];
 }
 
 void GraphicsView::getXY(double * x, double * y,
@@ -119,37 +118,40 @@ void GraphicsView::setParams(int number, QGraphicsPixmapItem * planet)
     int angle = 0;
 
     switch (symbol.toLatin1()) {
-    case 'a':
+    case 'a':           // ОВЕН
         angle = 154;
         break;
-    case 'b':
+    case 'b':           // ТЕЛЕЦ
         angle = 120;
         break;
-    case 'c':
+    case 'c':           // БЛИЗНЕЦЫ
         angle = 94;
         break;
-    case 'd':
+    case 'd':           // РАК
         angle = 70;
         break;
-    case 'e':
+    case 'e':           // ЛЕВ
         angle = 24;
         break;
-    case 'g':
+    //case 'f':         // ДЕВА
+
+
+    case 'g':           // ВЕСЫ
         angle = 334;
         break;
-    case 'h':
+    case 'h':           // СКОРПИОН
         angle = 299;
         break;
-    case 'i':
+    case 'i':           // СТРЕЛЕЦ
         angle = 270;
         break;
-    case 'j':
+    case 'j':           // КОЗЕРОГ
         angle = 245;
         break;
-    case 'k':
+    case 'k':           // ВОДОЛЕЙ
         angle = 211;
         break;
-    case 'l':
+    case 'l':           // РЫБЫ
         angle = 183;
         break;
     }

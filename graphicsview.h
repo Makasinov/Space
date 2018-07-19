@@ -51,6 +51,15 @@ private:
     QGraphicsPixmapItem * neptune;
     QGraphicsPixmapItem * pluto;
     QGraphicsPixmapItem * sun;
+    QString distanceArray[7][13] = {
+        {"6","AJ","D","C","B","A","C","D","JE","FI","GO","OG","IF"},
+        {"5","A", "B","C","F","J","C","F","O", "\0","E", "I" ,"D" },
+        {"4","FI","GC","DGO","JI","FE","GO","C","FI","AEJ","CD","CD","BJE"},
+        {"3","B","A","B","A","B","A","B","A","B","A","B","A"},
+        {"2","CO","FI","AEJ","CD","CD","BEJ","FI","GC","DGO","JI","FE","GO"},
+        {"1","G","O","\0","E","I","D","A","B","C","F","J","C"},
+        {"0","D","EJ","FI","GO","GO","FI","EJ","D","C","D","A","C"}
+    };
 
 signals:
     void resizeEvent(QResizeEvent * event);
