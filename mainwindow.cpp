@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Карта созвездий");
+
     QWidget::connect(this,SIGNAL(hideEvent(QHideEvent*)),myView,SLOT(close()));
 }
 
