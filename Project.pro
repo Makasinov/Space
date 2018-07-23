@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Project
 TEMPLATE = app
 
+CONFIG += exception
 RESOURCES = res.qrc
 
 # The following define makes your compiler emit warnings if you use

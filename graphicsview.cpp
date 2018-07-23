@@ -266,19 +266,28 @@ QChar GraphicsView::correctSymbol(const int number)
 void GraphicsView::setParams(int number, QGraphicsPixmapItem * planet)
 {
     QString dataString = this->table->item(0,number+1)->text();
-    QChar symbol = dataString.at(dataString.length()-1);
-    QVector<QChar> vec = {'a','b','c','d','e','f','g','h','i','j','k','l'};
-    if (planet == NULL || !vec.contains(symbol.toLatin1()))
+    QChar symbol = dataString.mid(dataString.length()-1,1)[0];
+    if (symbol == '\x0' && !ErrorRised)
     {
-        QMessageBox::warning(this,"Ошибка","Ошибка составления карты - 0180");
-        qDebug() << "Error in if statement -> " << planet << "\n-> " << symbol;
+        QMessageBox::information(this,"Ошибка",C_ERROR1);
+        ErrorRised = true;
         return;
     }
+    QVector<QChar> vec = {'a','b','c','d','e','f','g','h','i','j','k','l'};
+    bool contains = vec.contains(symbol.toLatin1());
+    if (planet == NULL)
+        return;
     int h = this->size().height();
     int w = this->size().width();
     double x = 0, y = 0;
     double radiusX = 0,radiusY = 0;
     int angle = 176;
+    if ( !contains && !ErrorRised)
+    {
+        QMessageBox::information(this,"Ошибка",C_ERROR1);
+        ErrorRised = true;
+        return;
+    }
     switch (symbol.toLatin1()) {
     case 'a':           // ОВЕН
         angle = 176;    // 154

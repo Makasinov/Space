@@ -18,6 +18,14 @@
 #include <QRect>
 #include <QApplication>
 #include <QDesktopWidget>
+#include <QException>
+
+class MyException : public QException
+{
+public:
+    void raise() const { throw *this; }
+    MyException *clone() const { return new MyException(*this); }
+};
 
 class GraphicsView : public QGraphicsView
 {
@@ -47,6 +55,7 @@ private:
     QGraphicsScene scene;
     QTableWidget * table;
     QWidget * parent;
+    bool ErrorRised = false;
     QGraphicsEllipseItem ecl1,ecl2,ecl3,ecl4,ecl5,ecl6,ecl7,ecl8;
     QGraphicsPixmapItem * moon;
     QGraphicsPixmapItem * mercury;
@@ -69,6 +78,9 @@ private:
         { "1", "G",  "O",  "?",   "E",  "I",  "D",   "A",  "B",  "C",   "F",  "J",  "C"   },
         { "0", "D",  "EJ", "FI",  "GO", "GO", "FI",  "EJ", "D",  "C",   "B",  "A",  "C"   }
     };
+    const QString C_ERROR1 = "Таблица заполнена не правильно, пример заполнения:\n"
+                             "23 R j, где 23 - градус, R/D - Ретраград./Директ.\n"
+                             "и j - знак зодиака";
 
 signals:
     void resizeEvent(QResizeEvent * event);
