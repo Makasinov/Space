@@ -157,3 +157,23 @@ void MainWindow::on_pushButton_2_clicked()
         myView->setFocus();
     } else QMessageBox::information(this,"Выберите дату","Не выбрана дата построения карты");
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    if(this->ui->tableWidget->itemAt(0,0) != NULL)
+    {
+        delete myFormula;
+        myFormula = new Formula();
+        myFormula->setTable(this->ui->tableWidget);
+        myFormula->setGeometry(
+                    QStyle::alignedRect(
+                        Qt::LeftToRight,
+                        Qt::AlignCenter,
+                        myFormula->size(),
+                        qApp->desktop()->availableGeometry()
+                        )
+                    );
+        myFormula->show();
+        myFormula->setFocus();
+    } else QMessageBox::information(this,"Выберите дату","Не выбрана дата построения карты");
+}

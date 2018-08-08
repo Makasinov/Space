@@ -31,12 +31,12 @@ class GraphicsView : public QGraphicsView
 {
     Q_OBJECT
 public:
-    explicit GraphicsView(QWidget *parent = 0);
-    void getXY(double * x, double * y,
+    explicit GraphicsView(QWidget *parent = nullptr);
+    void   getXY(double * x, double * y,
                 const int angle,
                 const int ECLIPSE_RADIUSX,
                 const int ECLIPSE_RADIUSY);
-    void correctXY(const int angle,
+    void   correctXY(const int angle,
                 double * x,
                 double * y,
                 const int w,
@@ -67,7 +67,7 @@ private:
     QGraphicsPixmapItem * neptune;
     QGraphicsPixmapItem * pluto;
     QGraphicsPixmapItem * sun;
-    QString distanceArray[8][13] =      // Меркурий часто повторяется
+    QString distanceArray[8][13] =      // Меркурий часто повторяется (C)
     {
         { " ", "a",  "b",  "c",   "d",  "e",  "f",   "g",  "h",  "i",   "j",  "k",  "l"   },
         { "6", "EJ", "D",  "C",   "B",  "A",  "C",   "D",  "JE", "FI",  "GO", "OG", "IF"  },

@@ -7,14 +7,14 @@ GraphicsView::GraphicsView(QWidget *parent)
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawPlanets()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSigns()));
     QObject::connect(this,SIGNAL(resizeEvent(QResizeEvent*)),this,SLOT(drawSpacePlanets()));
+
     this->setHorizontalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     this->setVerticalScrollBarPolicy ( Qt::ScrollBarAlwaysOff );
     this->setScene(&scene);
     this->parent = parent;
-    this->setWindowTitle(tr("Эфемериды"));
     QRect rec = QApplication::desktop()->screenGeometry();
     this->setGeometry(0,0,rec.height()*0.9,rec.height()*0.9);
-    this->setWindowTitle(tr("Карта созвездий"));
+    this->setWindowTitle(tr("Космограмма"));
 }
 
 void GraphicsView::getXY(double * x, double * y,
@@ -150,8 +150,8 @@ QPoint GraphicsView::getEllipse(const int angle = 0)
     int varH = ( ( h - h / 4 ) / 2 );
     const double ECLIPSE_RADIUSX = varW - w * 0.002;       //
     const double ECLIPSE_RADIUSY = varH - h * 0.002;       //
-    int x = cos(2 * M_PI * angle / 360) * ECLIPSE_RADIUSX + w / 2 - 2;
-    int y = sin(2 * M_PI * angle / 360) * ECLIPSE_RADIUSY + h / 2 - 2;
+    int x = cos(2 * M_PI * angle  / 360) * ECLIPSE_RADIUSX + w / 2 - 2;
+    int y = sin(2 * M_PI * angle  / 360) * ECLIPSE_RADIUSY + h / 2 - 2;
     return QPoint(x,y);
 }
 
